@@ -10,8 +10,8 @@
 (use-package dashboard
   :config
   (dashboard-setup-startup-hook)
-  (setq dashboard-startup-banner "Luna.txt")
   (setq dashboard-banner-logo-title "Welcome to Luna's Emacs.")
+  (setq dashboard-startup-banner 'official)
   (setq dashboard-center-content t)
   (setq dashboard-vertically-center-content t)
   (setq dashboard-items '((recents . 5)
