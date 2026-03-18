@@ -28,8 +28,8 @@ input {
 	}
 	focus-follows-mouse max-scroll-amount="0%"
 }
-output "Virtual-1" {
-	mode "2560x1600@59.987"
+output "eDP-1" {
+	mode "2560x1600@120.017"
 	scale 1.25
 	transform "normal"
 	position x=0 y=0
@@ -37,7 +37,7 @@ output "Virtual-1" {
 }
 
 layout {
-	gaps 5
+	gaps 0
 	center-focused-column "never"
 	preset-column-widths {
 		proportion 0.33333
