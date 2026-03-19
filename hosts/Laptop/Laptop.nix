@@ -5,7 +5,6 @@
 		./hardware-configuration.nix
 		../../modules/base
 		../../modules/desktop
-		../../modules/networking
 	];
 	networking.hostName = "NixOS";
 	users.users.Luna = {
