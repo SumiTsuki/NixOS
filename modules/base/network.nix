@@ -1,5 +1,9 @@
 { pkgs, config, ... }:
 
 {
-	programs.clash-verge.enable = true;
+	programs.clash-verge = {
+		enable = ture;
+		serviceMode = true;
+		tunMode = true;
+	};
 }
