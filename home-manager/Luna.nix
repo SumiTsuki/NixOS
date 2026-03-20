@@ -16,7 +16,6 @@
 		./zsh
 		./fcitx5
 		./swaybg
-		./wlogout
 		./hyprlock
 		./waybar
 		./wofi
