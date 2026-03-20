@@ -2,7 +2,7 @@
 
 {
 	programs.clash-verge = {
-		enable = ture;
+		enable = true;
 		serviceMode = true;
 		tunMode = true;
 	};
