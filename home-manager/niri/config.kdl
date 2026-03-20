@@ -80,9 +80,9 @@ binds {
 	Mod+R { switch-preset-column-width; }
 	Mod+Shift+R { switch-preset-window-height; }
 	Mod+Ctrl+R { reset-window-height; }
-	Mod+W+F { maximize-column; }
-	Mod+W+Shift+F { fullscreen-window; }
-	Mod+W+Ctrl+F { expand-column-to-available-width; }
+	Mod+F { maximize-column; }
+	Mod+Shift+F { fullscreen-window; }
+	Mod+Ctrl+F { expand-column-to-available-width; }
 	Mod+C { center-column; }
 	Mod+Shift+C { center-visible-columns; }
 	Mod+V { toggle-window-floating; }
@@ -108,7 +108,7 @@ binds {
 	Mod+Shift+Down  { move-window-down; }
 	Mod+Shift+Up    { move-window-up; }
 	Mod+Shift+Right { move-column-right; }
-	Mod+Shift+B     { move-column-left; }
+	Ctrl+B     { move-column-left; }
 	Mod+Shift+N     { move-window-down; }
 	Mod+Shift+P     { move-window-up; }
 	Mod+Shift+F     { move-column-right; }
