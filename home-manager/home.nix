@@ -3,7 +3,7 @@
 {
 	home.username = "Luna";
 	home.homeDirectory = "/home/Luna";
-	home.packages = with pkgs;[
+	home.packages = with pkgs; [
 		fastfetch
 		yazi
 		git
