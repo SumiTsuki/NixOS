@@ -1,9 +1,7 @@
 { pkgs, config, ... }:
 
 {
-	imports = [
-		clash-verge-rev
-	];
+	programs.clash-verge-rev.enable = true;
 	environment.sessionVariables = {
     HTTP_PROXY = "http://127.0.0.1:7890";
     HTTPS_PROXY = "http://127.0.0.1:7890";
