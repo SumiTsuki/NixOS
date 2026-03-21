@@ -63,7 +63,11 @@
   :config
   (setq completion-category-overrides '((eglot (styles orderless))))
   (add-to-list 'eglot-ignored-server-capabilities :documentOnTypeFormattingProvider)
-  (setq eglot-format-on-save nil))
+  (setq eglot-format-on-save nil)
+  (add-to-list 'eglot-server-programs '(nix-mode . ("nixd")))
+  (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(python-mode . ("pyright"))))
 
 (use-package cape
   :init
