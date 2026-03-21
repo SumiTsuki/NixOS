@@ -54,6 +54,8 @@
   :init
   (global-corfu-mode))
 
+(use-package nix-mode)
+
 (use-package eglot
   :hook
   ((nix-mode . eglot-ensure)
