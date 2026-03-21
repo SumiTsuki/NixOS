@@ -3,7 +3,7 @@
 {
 	home.packages = with pkgs; [
 		emacs-pgtk
-		rnix-lsp
+		nil
 		clangd
 		pyright
 	];
