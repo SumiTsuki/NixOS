@@ -6,8 +6,4 @@
 		serviceMode = true;
 		tunMode = true;
 	};
-  services.mihomo = {
-    enable = true;
-    tunMode = true;
-  };
 }
