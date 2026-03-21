@@ -1,3 +1,7 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 
-{}
+{
+	environment.systemPackages = with pkgs; [
+		python315
+	];
+}
