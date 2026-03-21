@@ -67,7 +67,7 @@
   (setq completion-category-overrides '((eglot (styles orderless))))
   (add-to-list 'eglot-ignored-server-capabilities :documentOnTypeFormattingProvider)
   (setq eglot-format-on-save nil)
-  (add-to-list 'eglot-server-programs '(nix-mode . ("rnix-lsp")))
+  (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
   (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
   (add-to-list 'eglot-server-programs '(python-mode . ("pyright" "--stdio"))))
