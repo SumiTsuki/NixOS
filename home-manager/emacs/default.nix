@@ -3,8 +3,8 @@
 {
 	home.packages = with pkgs; [
 		emacs-pgtk
-		nixd
-		clang-tools
+		rnix-lsp
+		clangd
 		pyright
 	];
 	home.file.".config/emacs" = {
