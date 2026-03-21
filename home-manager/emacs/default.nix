@@ -4,7 +4,7 @@
 	home.packages = with pkgs; [
 		emacs-pgtk
 		nil
-		clangd
+		clang-tools
 		pyright
 	];
 	home.file.".config/emacs" = {
