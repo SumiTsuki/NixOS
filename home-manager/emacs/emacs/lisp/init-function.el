@@ -67,7 +67,7 @@
   (add-to-list 'eglot-server-programs '(nix-mode . ("nixd")))
   (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
   (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
-  (add-to-list 'eglot-server-programs '(python-mode . ("pyright"))))
+  (add-to-list 'eglot-server-programs '(python-mode . ("pyright" "--stdio"))))
 
 (use-package cape
   :init
