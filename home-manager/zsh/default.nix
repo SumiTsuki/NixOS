@@ -7,10 +7,10 @@
 		enableCompletion = true;
 		syntaxHighlighting.enable = true;
 		autosuggestion.enable = true;
-		initContent = ''
-			source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
-		  [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-      eval "$(direnv hook zsh)"
+		initContent = ''  
+                source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+                [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+                eval "$(direnv hook zsh)"
 		'';
 	};
 	home.packages = with pkgs; [
