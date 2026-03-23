@@ -12,4 +12,5 @@
   (eaf-bind-key scroll_down "C-p" eaf-pdf-viewer-keybinding)
   (eaf-bind-key take_photo "p" eaf-camera-keybinding)
   (eaf-bind-key nil "M-q" eaf-browser-keybinding))
+
 (provide 'init-eaf)
