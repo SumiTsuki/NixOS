@@ -4,13 +4,18 @@
 			 :host github
 			 :repo "emacs-eaf/emacs-application-framework"
 			 :submodules t
-			 :files(:recursive t "*.el" "*.py" "*.json" "core" "app" "screenshot"))
+			 :files ("*"))
   :custom
   (eaf-python-command "python3")
   (eaf-config-location (expand-file-name "eaf/" user-emacs-directory))
   (eaf-browser-continue-where-left-off t)
   (eaf-browser-enable-adblocker t)
   (browse-url-browser-function 'eaf-open-browser)
+  :init
+  (let ((eaf-app-dir (expand-file-name "straight/repos/emacs-application-framework/app" user-emacs-directory)))
+    (when (file-directory-p eaf-app-dir)
+      (let ((default-directory eaf-app-dir))
+        (normal-top-level-add-subdirs-to-load-path))))
   :config
   (require 'eaf-browser)
   (require 'eaf-pdf-viewer)
