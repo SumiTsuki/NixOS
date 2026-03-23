@@ -4,7 +4,7 @@
 (load custom-file 'noerror)
 
 ;; --- GC ---
-(setq gc-cons-threshold (*64 1024 1024))
+(setq gc-cons-threshold (* 64 1024 1024))
 ;; --- UI ---
 (setq inhibit-startup-screen t)
 (setq initial-scratch-message "")
