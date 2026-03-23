@@ -29,4 +29,3 @@
 (require 'init-ui)
 (require 'init-function)
 (require 'init-tools)
-(require 'init-eaf)
