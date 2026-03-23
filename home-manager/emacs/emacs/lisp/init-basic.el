@@ -4,16 +4,11 @@
 (load custom-file 'noerror)
 
 ;; --- GC ---
-
 (let ((normal-gc-cons-threshold (* 20 1024 1024))
-      (init-gc-cons-threshold (* 128 1024 1024))
-      (old-file-name-handler-alist file-name-handler-alist))
-  (setq gc-cons-threshold init-gc-cons-threshold
-        file-name-handler-alist nil)
+      (init-gc-cons-threshold (* 128 1024 1024)))
+  (setq gc-cons-threshold init-gc-cons-threshold)
   (add-hook 'emacs-startup-hook
-            (lambda ()
-              (setq gc-cons-threshold normal-gc-cons-threshold
-                    file-name-handler-alist old-file-name-handler-alist))))
+            (lambda () (setq gc-cons-threshold normal-gc-cons-threshold)))
 
 
 ;; --- UI ---
