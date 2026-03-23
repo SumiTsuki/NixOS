@@ -3,7 +3,8 @@
 			 :type git
 			 :host github
 			 :repo "emacs-eaf/emacs-application-framework"
-			 :files("*.el" "*.py" "*.json" "core" "app" "screenshot"))
+			 :submodules t
+			 :files(:recursive t "*.el" "*.py" "*.json" "core" "app" "screenshot"))
   :custom
   (eaf-python-command "python3")
   (eaf-config-location (expand-file-name "eaf/" user-emacs-directory))
