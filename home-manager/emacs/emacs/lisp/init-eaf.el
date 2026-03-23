@@ -12,13 +12,10 @@
   (eaf-browser-enable-adblocker t)
   (browse-url-browser-function 'eaf-open-browser)
   :init
-  (let* ((eaf-repo-dir (expand-file-name "straight/repos/emacs-application-framework" user-emacs-directory))
-         (eaf-app-dir (expand-file-name "app" eaf-repo-dir)))
-    (when (file-directory-p eaf-repo-dir)
-      (add-to-list 'load-path eaf-repo-dir)
-      (when (file-directory-p eaf-app-dir)
-        (let ((default-directory eaf-app-dir))
-          (normal-top-level-add-subdirs-to-load-path)))))
+  (let ((repo-path (expand-file-name "straight/repos/emacs-application-framework" user-emacs-directory)))
+    (add-to-list 'load-path repo-path)
+    (add-to-list 'load-path (expand-file-name "app/browser" repo-path))
+    (add-to-list 'load-path (expand-file-name "app/pdf-viewer" repo-path)))
   :config
   (require 'eaf-browser)
   (require 'eaf-pdf-viewer)
