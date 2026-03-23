@@ -1,5 +1,15 @@
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
+(let ((normal-gc-cons-threshold (* 20 1024 1024))
+      (init-gc-cons-threshold (* 128 1024 1024))
+      (old-file-name-handler-alist file-name-handler-alist))
+  (setq gc-cons-threshold init-gc-cons-threshold
+        file-name-handler-alist nil)
+  (add-hook 'emacs-startup-hook
+            (lambda ()
+              (setq gc-cons-threshold normal-gc-cons-threshold
+                    file-name-handler-alist old-file-name-handler-alist))))
+
 ;; (require 'package)
 ;; (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 ;; (unless package-archive-contents
