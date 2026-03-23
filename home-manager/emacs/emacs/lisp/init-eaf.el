@@ -9,7 +9,7 @@
   (eaf-config-location (expand-file-name "eaf/" user-emacs-directory))
   (eaf-browser-continue-where-left-off t)
   (eaf-browser-enable-adblocker t)
-  (browse-url browser-function 'eaf-open-browser)
+  (browse-url-browser-function 'eaf-open-browser)
   :config
   (defalias 'browse-web #'eaf-open-browser)
   (eaf-bind-key scroll_up "C-n" eaf-pdf-viewer-keybinding)
