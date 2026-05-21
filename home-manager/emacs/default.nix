@@ -5,6 +5,7 @@
 		emacs-pgtk
 		nil
 		clang-tools
+    cmake-language-server
 		pyright
 	];
 	home.file.".config/emacs" = {

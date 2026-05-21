@@ -55,13 +55,20 @@
   (global-corfu-mode))
 
 (use-package nix-mode
-  :mode "\\.nix\\'")
+  :mode
+  ("\\.nix\\'" . nix-mode))
+
+(use-package cmake-mode
+  :mode
+  (("CMakeLists\\.txt\\'" . cmake-mode)
+   ("\\.cmake\\'" . cmake-mode)))
 
 (use-package eglot
   :hook
   ((nix-mode . eglot-ensure)
    (c-mode . eglot-ensure)
    (c++-mode . eglot-ensure)
+   (cmake-mode . eglot-ensure)
    (python-mode . eglot-ensure))
   :config
   (setq completion-category-overrides '((eglot (styles orderless))))
@@ -70,6 +77,7 @@
   (add-to-list 'eglot-server-programs '(nix-mode . ("nil")))
   (add-to-list 'eglot-server-programs '(c-mode . ("clangd")))
   (add-to-list 'eglot-server-programs '(c++-mode . ("clangd")))
+  (add-to-list 'eglot-server-programs '(cmake-mode . ("cmake-language-server")))
   (add-to-list 'eglot-server-programs '(python-mode . ("pyright-langserver" "--stdio"))))
 
 (use-package cape

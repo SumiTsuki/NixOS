@@ -16,6 +16,7 @@
 		wget
 		curl
 		p7zip
+		mihomo
 	];
 	programs.neovim = {
 		enable = true;
